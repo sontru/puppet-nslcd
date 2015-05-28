@@ -12,7 +12,7 @@ gid <%= scope.lookupvar('nslcd::process_user') %>
 uri <%= scope.lookupvar('nslcd::uri') %>
 
 # The search base that will be used for all queries.
-<% if scope.lookupvar('nslcd::base_dn') != "" -%>
+<% if scope.lookupvar('nslcd::base_dn') == "" -%>
 # base dc=example,dc=net
 <% else -%>
 base <%= scope.lookupvar('nslcd::base_dn') %>
