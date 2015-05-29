@@ -37,8 +37,12 @@ bindpw <%= scope.lookupvar('nslcd::bind_pw') %>
 #rootpwmoddn cn=admin,dc=example,dc=com
 
 # SSL options
+<% if scope.lookupvar('nslcd::options') == "" -%>
 #ssl off
 #tls_reqcert never
+<% else -%>
+<%= scope.lookupvar('nslcd::options') %>
+<% end -%>
 
 # The search scope.
 #scope sub
