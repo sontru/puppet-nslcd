@@ -192,7 +192,7 @@ class nslcd (
   $base_dn             = params_lookup( 'base_dn' ),
   $ldap_version        = params_lookup( 'ldap_version' ),
   $bind_dn             = params_lookup( 'bind_dn' ),
-  $bind_pw             = params_lookup( 'bind_pw' )
+  $bind_pw             = params_lookup( 'bind_pw' ),
   $opt_ssl             = params_lookup( 'opt_ssl' ),
   $tls_reqcert         = params_lookup( 'tls_reqcert' )
   ) inherits nslcd::params {
