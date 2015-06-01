@@ -49,5 +49,17 @@ tls_reqcert <%= scope.lookupvar('nslcd::tls_reqcert') %>
 <% end -%>
 
 # The search scope.
+<% if scope.lookupvar('nslcd::scope') == "" -%>
 #scope sub
+<% else -%>
+scope <%= scope.lookupvar('nslcd::scope') %>
+<% end -%>
+
+# Mappings
+<% if scope.lookupvar('nslcd::mappings') == "" -%>
+<% else -%>
+  <% mappings.each do |maps| %>
+map <%= maps %>
+  <% end -%>
+<% end -%>
 
