@@ -58,6 +58,7 @@ scope <%= scope.lookupvar('nslcd::scope') %>
 # Mappings
 <% if scope.lookupvar('nslcd::mappings') == "" -%>
 <% else -%>
-<% mappings.each do |maps| %>map <%= maps %><% end -%>
+<% mappings.each do |maps| %>map <%= maps %>
+<% end -%>
 <% end -%>
 
