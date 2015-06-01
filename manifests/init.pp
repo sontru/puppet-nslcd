@@ -195,6 +195,7 @@ class nslcd (
   $bind_pw             = params_lookup( 'bind_pw' ),
   $opt_ssl             = params_lookup( 'opt_ssl' ),
   $tls_reqcert         = params_lookup( 'tls_reqcert' ),
+  $scope               = params_lookup( 'scope' ),
   $mappings            = params_lookup( 'mappings' )
   ) inherits nslcd::params {
 
