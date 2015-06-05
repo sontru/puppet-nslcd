@@ -56,6 +56,8 @@ scope <%= scope.lookupvar('nslcd::scope') %>
 <% end -%>
 
 # Mappings
+# Hardwire this in because of bug https://tickets.puppetlabs.com/browse/ENTERPRISE-697 in PE-console
+map passwd homeDirectory "/home/$uid"
 <% if scope.lookupvar('nslcd::mappings') == "" -%>
 <% else -%>
 <% mappings.each do |maps| %>map <%= maps %>
