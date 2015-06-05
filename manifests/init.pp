@@ -301,6 +301,12 @@ class nslcd (
     audit   => $nslcd::manage_audit,
   }
 
+  user { "nslcd":
+    ensure => "present",
+  }
+  group { "nslcd":
+    ensure => "present",
+  }
   ### Include custom class if $my_class is set
   if $nslcd::my_class {
     include $nslcd::my_class
