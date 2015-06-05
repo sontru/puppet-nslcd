@@ -178,6 +178,7 @@ class nslcd (
   $service_status      = params_lookup( 'service_status' ),
   $process             = params_lookup( 'process' ),
   $process_args        = params_lookup( 'process_args' ),
+  $process_group       = params_lookup( 'process_group' ),
   $process_user        = params_lookup( 'process_user' ),
   $config_file         = params_lookup( 'config_file' ),
   $config_file_mode    = params_lookup( 'config_file_mode' ),
