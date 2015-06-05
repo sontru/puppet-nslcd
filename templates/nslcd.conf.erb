@@ -6,7 +6,7 @@
 
 # The user and group nslcd should run as.
 uid <%= scope.lookupvar('nslcd::process_user') %>
-gid <%= scope.lookupvar('nslcd::process_user') %>
+gid <%= scope.lookupvar('nslcd::process_group') %>
 
 # The location at which the LDAP server(s) should be reachable.
 uri <%= scope.lookupvar('nslcd::uri') %>
