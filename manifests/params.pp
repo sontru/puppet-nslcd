@@ -48,6 +48,10 @@ class nslcd::params {
     default => 'nslcd',
   }
 
+  $process_group = $::operatingsystem ? {
+    default => 'nslcd',
+  }
+
   $config_file = $::operatingsystem ? {
     default => '/etc/nslcd.conf',
   }
