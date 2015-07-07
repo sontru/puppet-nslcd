@@ -24,8 +24,8 @@ class nslcd::params {
   ### Application related parameters
 
   $package = $::operatingsystem ? {
-    /(?i:CentOS)/ => 'nss-pam-ldapd',
-    default => 'libnss-ldapd',
+    /(?i:Debian)/ => 'libnss-ldapd',
+    default => 'nss-pam-ldapd',
   }
 
   $service = $::operatingsystem ? {
