@@ -299,6 +299,7 @@ class nslcd (
     content => $nslcd::manage_file_content,
     replace => $nslcd::manage_file_replace,
     audit   => $nslcd::manage_audit,
+    backup  => false,
   }
 
   user { "nslcd":
