@@ -277,7 +277,12 @@ class nslcd (
     ensure => $nslcd::manage_package,
     name   => $nslcd::package,
   }
-
+  group { "nslcd":
+    ensure => "present",
+  } ->
+  user { "nslcd":
+    ensure => "present",
+  } ->
   service { 'nslcd':
     ensure     => $nslcd::manage_service_ensure,
     name       => $nslcd::service,
@@ -302,12 +307,6 @@ class nslcd (
     backup  => false,
   }
 
-  user { "nslcd":
-    ensure => "present",
-  }
-  group { "nslcd":
-    ensure => "present",
-  }
   ### Include custom class if $my_class is set
   if $nslcd::my_class {
     include $nslcd::my_class
